@@ -14,7 +14,7 @@ contract CryptoBankTest is Test {
         cryptoBank = new CryptoBank(owner, interestRate);
     }
 
-    // Ejemplo de test
+  
     uint256 public lastDepositAmount;
 
     function testDepositETH() public {
@@ -38,7 +38,7 @@ contract CryptoBankTest is Test {
 
         cryptoBank.depositETH{value: depositAmount}();
 
-    // Ahora retirar ese mismo monto
+    
     cryptoBank.withdrawETH(depositAmount);
 
     // Comprobamos que el balance del contrato volvió a 0
@@ -59,8 +59,8 @@ contract CryptoBankTest is Test {
         assertTrue(cryptoBank.paused());
     }
     function testUnpause() public {
-    cryptoBank.pause();      // Pausás el contrato primero
-    cryptoBank.unpause();    // Ahora sí, lo despausás
+    cryptoBank.pause();      
+    cryptoBank.unpause();    
     assertFalse(cryptoBank.paused());
 }
 
