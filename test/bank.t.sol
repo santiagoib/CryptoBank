@@ -66,5 +66,4 @@ contract CryptoBankTest is Test {
 
     receive() external payable {}
 
-
-    }
+}
